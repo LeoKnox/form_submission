@@ -1,0 +1,32 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using form_submission.Models
+@model User
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Form Submission</title>
+    </head>
+    <body>
+        <h2>Enter your information</h2>
+        <form asp-action="Create" asp-controller="Hello" method="post">
+            <span asp-validation-for="fname"></span>
+            <label asp-for="fname"></label>
+            <input asp-for="fname"><br>
+            <span asp-validation-for="lname"></span>
+            <label asp-for="lname"></label>
+            <input asp-for="lname"><br>
+            <span asp-validation-for="age"></span>
+            <label asp-for="age"></label>
+            <input asp-for="age"><br>
+            <span asp-validation-for="email"></span>
+            <label asp-for="email"></label>
+            <input asp-for="email"><br>
+            <span asp-validation-for="password"></span>
+            <label asp-for="password"></label>
+            <input asp-for="password"><br>
+            <input value = "Add User" type="submit">
+        </form>
+    </body>
+</html>
